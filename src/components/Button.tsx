@@ -8,9 +8,16 @@ interface Props {
 }
 
 
-function Button({children, onClick, color = 'primary'}: Props) {
+function Button({ children, onClick, color = 'primary' }: Props) {
 	return (
-		<button className={'btn btn-' + color} onClick={onClick}>{children}</button>
+		<button
+			className={'btn btn-' + color}
+			onClick={onClick}
+		>{
+				children
+			}</button>
+
+
 	)
 }
 
