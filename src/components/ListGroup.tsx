@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 function ListGroup() {
 	let items = [
 		'New York',
@@ -6,27 +8,25 @@ function ListGroup() {
 		'London',
 		'Paris'
 	];
-	items = [];
 
-
-
-	//* <h1> is repeated. to avoid this => 
-	// if (items.length === 0)
-	// 	return (
-	// 		<>
-	// 			<h1>List</h1>
-	// 			<p>No item found</p>
-	// 		</>
-	// 	);
-
+	//* this is Event handler
+	const handleClick = (event: MouseEvent) => console.log(event);
 
 	return (
 		<>
 			<h1>List</h1>
-			{//* we use ternary operator
-				items.length === 0 ? <p>No item found</p> : null}
+			{items.length === 0 && <p>No item found</p>}
 			<ul className="list-group">
-				{items.map(item => <li key={item}>{item}</li>)}
+				{/* //* map function can take each element and its index as parameter */}
+				{items.map((item, index) =>
+					<li
+						className="list-group-item"
+						key={item}
+						onClick={handleClick}
+						// onClick={() => console.log(index + ' : ' + item)}
+					>
+						{item}
+					</li>)}
 			</ul>
 		</>
 	);
