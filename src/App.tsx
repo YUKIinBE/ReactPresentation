@@ -3,8 +3,12 @@ import Alert from "./components/Alert";
 import Button from "./components/Button";
 import Heart from "./components/Heart";
 import Customer from "./components/customer";
+import Navbar from "./components/Navbar";
+import Cart from "./components/Cart";
 
 function App() {
+  const [cartItems, setCartItems] = useState(['Product1', 'Product2'])
+
   const [alertVisible, setAlertVisibility] = useState(false);
   return (
     <div>
@@ -17,6 +21,8 @@ function App() {
       >My Button</Button>
 
       <Heart onClick={() => console.log('clicked') }/>
+        <Navbar cartItemsCount={cartItems.length}/>
+        <Cart cartItems={cartItems} onClear={() => setCartItems([])}/>
     </div>
   )
 }
