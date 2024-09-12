@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Heart from "./components/Heart";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -13,6 +14,8 @@ function App() {
           setAlertVisibility(true)
         }}
       >My Button</Button>
+
+      <Heart onClick={() => console.log('clicked')}/>
     </div>
   )
 }
