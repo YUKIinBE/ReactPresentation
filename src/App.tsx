@@ -5,6 +5,7 @@ import Heart from "./components/Heart";
 import Customer from "./components/customer";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
+import Player from "./components/player";
 
 function App() {
   const [cartItems, setCartItems] = useState(['Product1', 'Product2'])
