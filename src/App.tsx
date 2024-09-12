@@ -2,6 +2,7 @@ import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import Heart from "./components/Heart";
+import Customer from "./components/customer";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -16,7 +17,6 @@ function App() {
       >My Button</Button>
 
       <Heart onClick={() => console.log('clicked') }/>
-      <Customer />
     </div>
   )
 }
