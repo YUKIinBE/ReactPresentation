@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { BsHeart, BsFillHeartFill } from "react-icons/bs";
-import styles from './Heart.css'
 
 interface Props {
 	onClick: () => void;

@@ -15,7 +15,8 @@ function App() {
         }}
       >My Button</Button>
 
-      <Heart onClick={() => console.log('clicked')}/>
+      <Heart onClick={() => console.log('clicked') }/>
+      <Customer />
     </div>
   )
 }
