@@ -30,7 +30,7 @@ const Form = () => {
         </label>
         <input 
         onChange={(event) => 
-          setPerson({...person, age: +event.target.value})} 
+          setPerson({...person, age: event.target.value})} 
         value={person.age}
         id="age" 
         type="number" 
